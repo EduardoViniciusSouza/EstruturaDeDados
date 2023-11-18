@@ -275,19 +275,19 @@ public class Main {
 
     // Atividade 1
     private static List<Item> mathRank(List<Item> items) {
-        items.sort((item1, item2) -> Double.compare(item1.getMathScore(), item2.getMathScore()));
+        items.sort(Comparator.comparingDouble(Item::getMathScore));
         return items;
     }
 
     // Atividade 2
     private static List<Item> readRank(List<Item> items) {
-        items.sort((item1, item2) -> Double.compare(item1.getReadScore(), item2.getReadScore()));
+        items.sort(Comparator.comparingDouble(Item::getReadScore));
         return items;
     }
 
     // Atividade 3
     private static List<Item> writeRank(List<Item> items) {
-        items.sort((item1, item2) -> Double.compare(item1.getWriteScore(), item2.getWriteScore()));
+        items.sort(Comparator.comparingDouble(Item::getWriteScore));
         return items;
     }
 
