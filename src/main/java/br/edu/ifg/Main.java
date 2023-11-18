@@ -38,7 +38,6 @@ public class Main {
 
         try {
             BufferedReader sc = new BufferedReader(new FileReader(path));
-
             boolean firstLine = true;
             String line;
             while ((line = sc.readLine()) != null) {
@@ -226,17 +225,20 @@ public class Main {
                         break;
                     case 7:
                         System.out.println("Which group of Race? ");
-                        String raceOption = scanner.next();
+                        scanner.nextLine();
+                        String raceOption = scanner.nextLine();
                         List<Item> raceItems = map.get(raceOption);
                         if (raceItems != null) {
                             mostraLista(raceItems);
                         } else {
                             System.out.println("No data available for the selected race group.");
                         }
+
                         break;
                     case 8:
                         System.out.println("Which group of Parental Level Education? ");
-                        String pleOption = scanner.next();
+                        scanner.nextLine();
+                        String pleOption = scanner.nextLine();
                         List<Item> pleItems = map.get(pleOption);
                         if (pleItems != null) {
                             mostraLista(pleItems);
